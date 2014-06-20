@@ -28,14 +28,10 @@ function merge (left, right, comparator) {
       rightPos++
     }
   }
-  while(leftPos < left.length) {
-    result.push(left[leftPos])
-    leftPos++
-  }
-  while(rightPos < right.length) {
-    result.push(right[rightPos])
-    rightPos++
-  }
+
+  // tack on the remainder of whichever
+  // array we haven't gotten to the end of
+  result = result.concat(left.slice(leftPos)).concat(right.slice(rightPos))
 
   return result
 }
