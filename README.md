@@ -7,18 +7,28 @@ sorta cool
 get the code:
 
     $ git clone https://github.com/jaredmcdonald/sort-js.git
-    
+
 use it:
 
     var sort = require('sort-js')
     var sorted = sort.mergeSort([6,5,4,3,2,1]) // [1, 2, 3, 4, 5, 6]
 
+## methods
+
+where `n` is the length of the array passed in,
+
+**mergeSort**: merge sort. `O(n log(n))`
+
+**selectionSort**: selection sort. `O(n^2)`
+
 ## tests
+
+a bit bare-bones right now, but...
 
 install dependencies (mocha and subdependencies):
 
     $ npm install
 
-then: 
+then:
 
     $ npm test
