@@ -21,6 +21,14 @@ where `n` is the length of the array passed in,
 
 **selectionSort**: selection sort. `O(n^2)`
 
+You can pass in a custom comparator function as the second argument to any of the methods, e.g.,
+
+    function greaterThan(a, b) {
+      return a > b
+    }
+
+    var sorted = sort.mergeSort([1,2,3], greaterThan) // [3,2,1]
+
 ## tests
 
 a bit bare-bones right now, but...
